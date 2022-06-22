@@ -1,0 +1,9 @@
+FROM ubuntu
+MAINTAINER Rushikesh <devopsbyrushi@gmail.com>
+RUN apt-get update -y
+RUN apt-get install git maven -y
+RUN apt-get install  wget -y
+RUN cd /opt/mvn && wget http://mirrors.estointernet.in/apache/maven/maven-3/3.6.2/binaries/apache-maven-3.6.2-bin.tar.gz
+RUN echo "hello test" > /opt/test1
+EXPOSE 8080
+
